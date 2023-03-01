@@ -119,7 +119,6 @@ basicCMD = {
 }
 
 
-# 格式化要发送的消息
 def format_b4_send(content):
     arr = []
     for ch in content:
@@ -138,7 +137,7 @@ def format_b4_send(content):
     return arr
 
 
-# 获取ip
+
 def get_ip(ip):
     target_host = []
     if ip.find('.') == -1:
@@ -168,7 +167,7 @@ def get_ip(ip):
     return target_host
 
 
-# 将要发送的消息打包成完整的指令
+
 def pkg_sendlist(cmdtype, content):
     arrs = format_b4_send(content)
     if cmdtype == '-msg':
@@ -186,7 +185,7 @@ def pkg_sendlist(cmdtype, content):
     return result
 
 
-# 发送
+
 def send(send_list, target_host, times, target_port: int = 4075, delay: int = 1 ):
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     target_host = get_ip(target_host)
