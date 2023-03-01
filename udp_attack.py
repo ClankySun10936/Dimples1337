@@ -1,8 +1,6 @@
 import sys
 import socket
 import random
-import argparse
-from re import compile
 from time import sleep
 from struct import pack
 from os import popen, system
